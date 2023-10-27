@@ -31,11 +31,11 @@ class Player {
     const baseScore = this.calculateScore(commonCards, selfCards)
     const adjustedScore = game.me().score() + baseScore
     if (adjustedScore > lowThreshold) {
-     return game.toRaiseByBlinds(50);
+     bet(game.toRaiseByBlinds(50));
     } else if (adjustedScore > midThreshold) {
-      return game.toCall();
+      bet(game.toCall());
     }
-    return game.me().bet()
+    bet(0)
   }
   static showdown(gameState) {
     var game = gameState(gameState)
