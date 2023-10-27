@@ -1,10 +1,10 @@
-const Card = require('./Card');
+const Card = require("./Card");
 
 const buildCard = (rank, suit) => {
   return new Card({
-     "rank": rank,
-     "suit": suit
-   });
+    rank: rank,
+    suit: suit,
+  });
 };
 
 const valueFor = (rank) => {
@@ -15,7 +15,7 @@ const scoreFor = (rank) => {
   return buildCard(rank, "spades").score();
 };
 
-test('Calculates values correctly', () => {
+test("Calculates values correctly", () => {
   expect(valueFor("A")).toBe(14);
   expect(valueFor("K")).toBe(13);
   expect(valueFor("Q")).toBe(12);
@@ -25,8 +25,7 @@ test('Calculates values correctly', () => {
   expect(valueFor("2")).toBe(2);
 });
 
-
-test('Calculates score correctly', () => {
+test("Calculates score correctly", () => {
   expect(scoreFor("A")).toBe(10);
   expect(scoreFor("K")).toBe(8);
   expect(scoreFor("Q")).toBe(7);
