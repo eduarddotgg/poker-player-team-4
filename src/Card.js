@@ -21,10 +21,10 @@ class Card {
   score() {
     return (
       {
-        A: 100,
-        K: 75,
-        Q: 60,
-        J: 40,
+        A: 10,
+        K: 7,
+        Q: 6,
+        J: 4,
       }[this.rank()] || this.value() / 2
     );
   }
