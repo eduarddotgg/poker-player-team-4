@@ -51,10 +51,6 @@ class PlayerState {
     const cards = this.holeCards();
     var score = Math.max(...cards.map((c) => c.score()));
 
-    if (score > 24) {
-      this.bet();
-    }
-
     if (this.hasPocketPair()) {
       score = Math.max(5, score * 2);
     } else if (this.pocketGap() < 3) {
