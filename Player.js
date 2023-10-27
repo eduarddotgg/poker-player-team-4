@@ -21,6 +21,7 @@ class Player {
         val += matcher(card1, card2)
       }
     }
+    return val;
   }
 
   static betRequest(gameState, bet) {
