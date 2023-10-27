@@ -1,5 +1,5 @@
 const GameState = require("./src/GameState");
-const lowThreshold = 14;
+const lowThreshold = 16;
 const midThreshold = 10;
 const PAIR_SCORE = 1;
 
