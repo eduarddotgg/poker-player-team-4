@@ -1,6 +1,6 @@
 const GameState = require("./src/GameState");
-const lowThreshold = 16;
-const midThreshold = 15;
+const lowThreshold = 20;
+const midThreshold = 16;
 const PAIR_SCORE = 1;
 
 const matcher = (card1, card2) => {
@@ -32,7 +32,8 @@ class Player {
     const commonCards = game.communityCards();
     const selfCards = game.me().holeCards();
     const baseScore = this.calculateScore(commonCards, selfCards);
-    const adjustedScore = game.me().score() + 0; // baseScore
+
+    const adjustedScore = game.me().score();
     if (adjustedScore >= lowThreshold || hasPair(game.me().holeCards())) {
       bet(game.toRaiseByBlinds(50));
     } else if (adjustedScore > midThreshold) {
