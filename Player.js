@@ -31,14 +31,15 @@ class Player {
     const baseScore = this.calculateScore(commonCards, selfCards)
     const adjustedScore = game.me().score() + baseScore
     if (adjustedScore > lowThreshold) {
-      game.toRaise();
+     return game.toRaise();
     } else if (adjustedScore > midThreshold) {
-      game.toCall();
+      return game.toCall();
     }
-
-    
+    return game.me().bet()
   }
-  static showdown(gameState) {}
+  static showdown(gameState) {
+    var game = gameState(gameState)
+  }
 }
 
 module.exports = Player;
