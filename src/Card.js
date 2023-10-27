@@ -25,7 +25,7 @@ class Card {
         K: 7,
         Q: 6,
         J: 4,
-      }[this.rank()] || this.value() / 2
+      }[this.rank()] || this.value()
     );
   }
 }
