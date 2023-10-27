@@ -8,10 +8,17 @@ const matcher = (card1, card2) => {
     return PAIR_SCORE;
   } 
 }
+
+const hasPair = (cards) => {
+  if (cards[0].rank === cards[1].rank) {
+    return true
+  }
+  return false
+}
 class Player {
   static get VERSION() {
     return "0.1";
-  }
+  }  
 
 
   static calculateScore(commonCards, selfCards) {
@@ -30,9 +37,9 @@ class Player {
     const selfCards = game.me().holeCards()
     const baseScore = this.calculateScore(commonCards, selfCards)
     const adjustedScore = game.me().score() + 0// baseScore
-    if (adjustedScore > lowThreshold) {
+    if (adjustedScore > lowThreshold || hasPair(game.me().holeCards())) {
      bet(game.toRaiseByBlinds(50));
-    } else if (adjustedScore > midThreshold) {
+    } else if (adjustedScore > midThreshold ) {
       bet(game.toCall());
     }
     bet(0)
