@@ -13,7 +13,7 @@ class Player {
     } else if (game.me().score() > midThreshold) {
       game.toCall();
     }
-    bet()
+    bet();
   }
   static showdown(gameState) {}
 }
