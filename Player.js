@@ -1,6 +1,6 @@
 const GameState = require("./src/GameState");
-const lowThreshold = 16;
-const midThreshold = 10;
+const lowThreshold = 18;
+const midThreshold = 16;
 const PAIR_SCORE = 1;
 
 const matcher = (card1, card2) => {
