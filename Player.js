@@ -28,8 +28,6 @@ class Player {
   }
 
   static betRequest(gameState, bet) {
-    throw new Error();
-    asdfsdfgjh
     var game = new GameState(gameState);
     const commonCards = game.communityCards();
     const selfCards = game.me().holeCards();
