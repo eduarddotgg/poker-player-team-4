@@ -11,6 +11,7 @@
     "express": "4.x"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier --write \"**/*.js\""
   }
 }
