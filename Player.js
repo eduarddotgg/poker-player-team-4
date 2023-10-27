@@ -10,10 +10,7 @@ const matcher = (card1, card2) => {
 }
 
 const hasPair = (cards) => {
-  if (cards[0].rank === cards[1].rank) {
-    return true
-  }
-  return false
+  return cards[0].rank === cards[1].rank
 }
 class Player {
   static get VERSION() {
